@@ -1,4 +1,12 @@
 # D6.6
+
+Добрый день, уважаемый проверяющий.
+Код сдан в ужасном состоянии и кусками, поэтому сразу извиняюсь за его внешний вид.
+В настоящее время и еще долго у меня не будет возможности писать коды где-либо, кроме как в "Блокноте".
+Прошу прощения за все ошибки, которые вы тут встретите.
+Надеюсь, мне удастся когда-нибудь пересдать его во вменяемом виде, но пока прошу проверить хотя бы этот результат.
+Благодарю вас за терпение и труд!)
+
 simpleapp/models.py
 from django.db import models
 from django.core.validators import MinValueValidator
@@ -21,7 +29,6 @@ class Post(models.Model):
         return f'{self.post_name.title()}:{self.time_created_post ()}:{self.description[:20]}'
 
 class Category(models.Model):
-    # названия категорий тоже не должны повторяться
     name = models.CharField(max_length=100, unique=True) 
     def __str__(self):
         return self.name.title()
